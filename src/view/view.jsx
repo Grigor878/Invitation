@@ -1,5 +1,11 @@
+import { Header } from "../components/header/header";
+
 const View = () => {
-  return <div>view</div>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 
 export default View;

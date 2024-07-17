@@ -1,47 +1,36 @@
-$text: #1A1A1A;
-$textMid: #747474;
-$textSmall: #6a7177;
-$span: #9099a1;
-$white: #fff;
-$blue :#004D99;
-// $darkBlue: #1D2D5B;
-$darkBlue: #355C8C;
-$green: #358000;
-$orange: #f6921e;
-$border: #DCDCDC;
-$bg: #f6f7f8;
-$bgBlue: #f4fbff;
-$bgFooter: #F2F4F5;
-$bgDark: #042331;
-
+$text: #312F2F;
+// $time: #222220;
+$white: #FFFFFF;
+$darkGreen: #004143;
+$bg: #F4FBFF;
 
 @mixin flex {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 @mixin flexCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @mixin flexCol {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 @mixin flexColCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 @mixin transition {
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }

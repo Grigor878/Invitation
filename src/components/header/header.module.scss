@@ -1,0 +1,11 @@
+@import '../../variables';
+
+.header{
+    &_context{
+        h2{}
+        
+        p{
+            // color: ;
+        }
+    }
+}
