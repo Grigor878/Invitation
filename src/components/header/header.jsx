@@ -1,14 +1,19 @@
+import { useTranslation } from "react-i18next";
 import { Language } from "../language/language";
 import styles from "./header.module.scss";
 
 export const Header = () => {
+  const { t } = useTranslation();
+
   return (
     <header className={styles.header}>
       <div className={styles.header_context}>
-        <h2>You are invited</h2>
-        <p>Saturday, Sep 14, 2024 </p>
+        <h2>{t("title")}</h2>
+        <p>{t("wedding_date")}</p>
       </div>
-      <Language />
+      <div className={styles.header_lng}>
+        <Language />
+      </div>
     </header>
   );
 };

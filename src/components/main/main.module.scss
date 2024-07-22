@@ -1,0 +1,102 @@
+@import '../../variables';
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    gap: 123px;
+
+    &_img {
+        width: 445px;
+    }
+
+    &_right {
+        @include flexCol;
+        gap: 40px
+    }
+
+    &_context {
+        @include flexCol;
+        gap: 28px;
+        width: 100%;
+        align-items: flex-start;
+
+        h2 {
+            color: $text;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 44px;
+            text-align: left;
+        }
+
+        &_text {
+            @include flexCol;
+            gap: 10px;
+
+            p {
+                color: $text;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+            }
+        }
+    }
+
+    &_decision {
+        @include flexCol;
+        gap: 40px;
+    }
+
+    &_form {
+        @include flexCol;
+        gap: 24px;
+
+        h4 {
+            color: $darkGreen;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 21px;
+        }
+
+        &_top {
+            @include flex;
+            gap: 22px;
+
+            input {
+                color: $text;
+                border-bottom: 1px solid $border;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+                padding-bottom: 11px;
+                width: 100%;
+            }
+        }
+
+        textarea {
+            color: $text;
+            border-bottom: 1px solid $border;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            width: 100%;
+        }
+
+        &_btns {
+            @include flex;
+            gap: 10px;
+
+            button {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 24px;
+                border-radius: 5px;
+                padding: 11px 17px;
+            }
+        }
+
+        &_remainder {
+            @include flex;
+            gap: 15px;
+        }
+    }
+}

@@ -1,8 +1,10 @@
 $text: #312F2F;
-// $time: #222220;
+$border: #222220;
+$input: #5E5E5E;
 $white: #FFFFFF;
 $darkGreen: #004143;
 $bg: #F4FBFF;
+$reject: #000000;
 
 @mixin flex {
     display: flex;
