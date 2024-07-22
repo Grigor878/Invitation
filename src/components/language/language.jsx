@@ -26,6 +26,7 @@ export const Language = () => {
     i18n.changeLanguage(code);
     setSelectedLng(name);
     cookies.set("i18next", code);
+    cookies.set("lngSelected", name);
     navigate(path);
   };
 

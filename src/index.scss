@@ -89,6 +89,16 @@ input[type="number"] {
     appearance: textfield;
 }
 
+// title
+.title {
+    color: $text;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: center;
+    text-align: center;
+}
+
 // btns{
 .btnReject {
     color: $reject;
@@ -116,7 +126,7 @@ input[type="number"] {
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
-    
+
     span {
         @include flexCenter;
         background: $bg;
