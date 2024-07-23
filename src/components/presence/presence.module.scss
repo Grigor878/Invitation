@@ -1,5 +1,61 @@
 @import '../../variables';
 
-.presence{
-    padding: 115px 0 29px 0;
+@mixin input {
+    color: $input;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.presence {
+    padding: 107px 0 50px 0;
+
+    h2 {
+        padding-bottom: 74px;
+    }
+
+    &_list {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    &_link {
+        @include flexCol;
+        gap: 15px;
+        align-items: flex-start;
+
+        p {
+            color: $darkGreen;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 48px;
+        }
+
+    }
+
+    &_block {
+        @include flexCol;
+
+        span {
+            @include input;
+        }
+
+        &_link {
+            @include input;
+
+            text-decoration: underline;
+        }
+
+        ul {
+            li {
+                display: flex;
+                gap: 5px;
+
+                a {
+                    @include input;
+                }
+            }
+        }
+    }
 }

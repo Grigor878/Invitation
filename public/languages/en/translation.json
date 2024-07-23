@@ -1,6 +1,11 @@
 {
+    "men": "Ed.",
+    "women": "Lia",
     "title": "You are invited",
     "wedding_date": "Saturday, Sep 14, 2024",
+    "church_time": "15:00 PM",
+    "venue_time": "17:30 PM",
+    "venue_name": "Voskevaz Village",
     "names": "Eduard & Lia",
     "subtitle_one": "Join us as we celebrate our love and commitment.",
     "subtitle_two": "Because you have shared our lives with your friendship and love, we, Eduard and Lia, invite you to join us as we exchange our vows.",
@@ -21,6 +26,7 @@
     "agenda": "Wedding agenda",
     "ceremony": "Church ceremony",
     "church_name": "Hovhannavank Monastery",
+    "church_location": "Ohanavan Village",
     "drinks": "Welcome Drinks",
     "voskevas": "Voskevaz Winery",
     "registration": "Registration Ceremony",
@@ -30,5 +36,7 @@
     "attire": "Attire",
     "dresscode": "We kindly request wearing cocktail formal attire in the following colors.",
     "colors": "Your participation in our color scheme will add to the beauty and harmony of our wedding photos.",
-    "created": "Invitation created by"
+    "created": "Invitation created by",
+    "loading": "Loading...",
+    "success": "The message has been sent."
 }

@@ -10,7 +10,10 @@ const View = () => {
 
   useEffect(() => {
     const lng = cookies.get("i18next") || "en";
-    lng === "am" ? navigate("/arm") : navigate("/eng");
+
+    lng === "am"
+      ? (navigate("/arm"), cookies.set("lngSelected", "Arm"))
+      : (navigate("/eng"), cookies.set("lngSelected", "Eng"));
   }, [navigate]);
 
   return (
