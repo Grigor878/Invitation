@@ -42,7 +42,6 @@ body {
     }
 }
 
-
 .container {
     margin: 0 auto;
     max-width: 1440px;
@@ -99,7 +98,7 @@ input[type="number"] {
     text-align: center;
 }
 
-// btns{
+// btns
 .btnReject {
     color: $reject;
     border: 1px solid $reject;
@@ -139,6 +138,7 @@ input[type="number"] {
     }
 }
 
+// react-image-gallery
 .image-gallery {
     width: 100% !important;
     height: 100% !important;
