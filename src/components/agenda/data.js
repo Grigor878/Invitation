@@ -31,7 +31,7 @@ export const data = [
         id: 4,
         icon: banquet,
         title: "banquet",
-        time: "registration_time",
+        time: "banquet_time",
         place: "voskevas"
     },
     {
