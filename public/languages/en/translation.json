@@ -44,5 +44,6 @@
     "colors": "Your participation in our color scheme will add to the beauty and harmony of our wedding photos.",
     "created": "Invitation created by",
     "loading": "Loading...",
-    "success": "The message has been sent."
+    "success": "The message has been sent.",
+    "close": "Close"
 }
