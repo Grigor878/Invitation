@@ -2,7 +2,7 @@ export const languageData = [
   {
     code: "am",
     path: "/arm",
-    name: "Arm",
+    name: "Հայ",
   },
   {
     code: "en",
