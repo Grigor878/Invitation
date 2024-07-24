@@ -17,7 +17,7 @@ export const Main = () => {
 
   const { VITE_PUBLIC_KEY, VITE_TEMPLATE_ID, VITE_SERVICE_ID } = import.meta
     .env;
-  console.log(guests);
+
   const handleReject = () => {
     fullname && (setNotes(t("reject")), setGuests("0"), sendEmail());
   };
@@ -27,14 +27,8 @@ export const Main = () => {
 
     loading(t("loading"));
 
-    const data = form.current;
-
-    if (data.get("guests") === "0") {
-      data.delete("guests");
-    }
-
     try {
-      await emailjs.sendForm(VITE_SERVICE_ID, VITE_TEMPLATE_ID, data, {
+      await emailjs.sendForm(VITE_SERVICE_ID, VITE_TEMPLATE_ID, form.current, {
         publicKey: VITE_PUBLIC_KEY,
       });
       success(t("success"));

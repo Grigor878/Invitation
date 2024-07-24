@@ -1,0 +1,32 @@
+@import "../../variables";
+
+.attire {
+    padding: 59px 0 107px 0;
+
+    &_row {
+        @include flexCenter;
+        // @include flex;
+        gap: 28px;
+        // justify-content: space-evenly;
+        padding-top: 70px;
+    }
+
+    &_col {
+        @include flexColCenter;
+        gap: 17px;
+        width: 393px;
+        text-align: center;
+
+        img {
+            height: 217px;
+        }
+
+        p {
+            color: $text;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: justify;
+        }
+    }
+}

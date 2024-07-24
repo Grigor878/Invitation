@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { Header } from "../components/header/header";
 import { Main } from "../components/main/main";
 import { Presence } from "../components/presence/presence";
+import { Agenda } from "../components/agenda/agenda";
+import { Attire } from "../components/attire/attire";
+import { Footer } from "../components/footer/footer";
 
 const View = () => {
   const navigate = useNavigate();
@@ -17,11 +20,18 @@ const View = () => {
   }, [navigate]);
 
   return (
-    <div className="container">
-      <Header />
-      <Main />
-      <Presence />
-    </div>
+    <>
+      <div className="container">
+        <Header />
+        <Main />
+        <Presence />
+      </div>
+      <Agenda />
+      <div className="container">
+        <Attire />
+        <Footer />
+      </div>
+    </>
   );
 };
 

@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.header_context}>
-        <h2>{t("title")}</h2>
+        <h2>{t("sub_title")}</h2>
         <p>{t("wedding_date")}</p>
       </div>
       <div className={styles.header_lng}>

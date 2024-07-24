@@ -5,7 +5,7 @@ export function timeUntil(targetDate) {
     const difference = target - now;
 
     if (difference <= 0) {
-        return "The target date has already passed.";
+        return "The target date has already passed!";
     }
 
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));

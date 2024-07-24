@@ -1,0 +1,6 @@
+@import "../../variables";
+
+.footer{
+    @include flexColCenter;
+    padding: 46px 0 76px 0;
+}
