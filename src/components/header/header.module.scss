@@ -7,6 +7,10 @@
     // @include flex;
     // justify-content: space-between;
 
+    @media screen and (max-width: 768px) {
+        padding: 46px 0 35px 0;
+    }
+
     &_context {
         @include flexColCenter;
 
@@ -16,6 +20,11 @@
             font-weight: 600;
             line-height: 36px;
 
+            @media screen and (max-width: 768px) {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 36px;
+            }
         }
 
         p {
@@ -23,12 +32,22 @@
             font-size: 14px;
             font-weight: 400;
             line-height: 21px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+            }
         }
     }
 
-    &_lng{
+    &_lng {
         position: absolute;
         top: 68px;
         right: 0;
+
+        @media screen and (max-width: 768px) {
+            top: 13px;
+        }
     }
 }

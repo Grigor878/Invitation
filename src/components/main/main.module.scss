@@ -5,13 +5,27 @@
     justify-content: space-between;
     gap: 123px;
 
+    @media screen and (max-width: 1120px) {
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     &_img {
         width: 445px;
+
+        @media screen and (max-width: 768px) {
+            width: 312px;
+        }
     }
 
     &_right {
         @include flexCol;
-        gap: 40px
+        gap: 40px;
+
+        @media screen and (max-width: 768px) {
+            gap: 35px;
+        }
     }
 
     &_context {
@@ -20,12 +34,23 @@
         width: 100%;
         align-items: flex-start;
 
+        @media screen and (max-width: 1120px) {
+            align-items: center;
+            justify-content: center;
+        }
+
         h2 {
             color: $text;
             font-size: 40px;
             font-weight: 600;
             line-height: 44px;
             text-align: left;
+
+            @media screen and (max-width: 768px) {
+                font-size: 33.04px;
+                font-weight: 600;
+                line-height: 36.35px;
+            }
         }
 
         &_text {
@@ -37,6 +62,12 @@
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 24px;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 13.22px;
+                    font-weight: 400;
+                    line-height: 19.82px;
+                }
             }
         }
     }
@@ -55,6 +86,12 @@
             font-size: 14px;
             font-weight: 600;
             line-height: 21px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 18px;
+            }
         }
 
         &_top {
@@ -69,6 +106,12 @@
                 line-height: 21px;
                 padding-bottom: 11px;
                 width: 100%;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 12px;
+                    line-height: 18px;
+                    padding-bottom: 9px;
+                }
             }
         }
 
@@ -79,11 +122,22 @@
             font-weight: 400;
             line-height: 21px;
             width: 100%;
+
+            @media screen and (max-width: 768px) {
+                font-size: 12px;
+                line-height: 18px;
+            }
         }
 
         &_btns {
             @include flex;
             gap: 10px;
+            padding-top: 18px;
+
+            @media screen and (max-width: 1120px) {
+                width: 100%;
+                justify-content: center;
+            }
 
             button {
                 font-size: 16px;
@@ -91,12 +145,23 @@
                 line-height: 24px;
                 border-radius: 5px;
                 padding: 11px 17px;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 13px;
+                    line-height: 20px;
+                    padding: 9px 14px;
+                }
             }
         }
 
         &_remainder {
             @include flex;
             gap: 15px;
+
+            @media screen and (max-width: 1120px) {
+                width: 100%;
+                justify-content: center;
+            }
         }
     }
 }

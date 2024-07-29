@@ -29,6 +29,7 @@ export const Slide = () => {
             key={id}
             src={img}
             alt={`slide${id}`}
+            className={styles.slide_img}
             onClick={() => openFullscreen(index)}
           />
         );

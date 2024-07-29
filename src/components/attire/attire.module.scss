@@ -3,22 +3,41 @@
 .attire {
     padding: 59px 0 107px 0;
 
+    @media screen and (max-width: 768px) {
+        padding: 44px 0 11px 0;
+    }
+
     &_row {
         @include flexCenter;
-        // @include flex;
         gap: 28px;
-        // justify-content: space-evenly;
         padding-top: 70px;
+
+        @media screen and (max-width: 1120px) {
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding-top: 33px;
+            gap: 10px;
+        }
     }
 
     &_col {
         @include flexColCenter;
         gap: 17px;
         width: 393px;
-        text-align: center;
+        text-align: center;    
+
+        @media screen and (max-width: 768px) {
+            gap: 10px;
+        }
 
         img {
             height: 217px;
+
+            @media screen and (max-width: 768px) {
+                height: 155px;
+            }
         }
 
         p {
@@ -27,6 +46,12 @@
             font-weight: 400;
             line-height: 24px;
             text-align: justify;
+
+            @media screen and (max-width: 768px) {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 18px;
+            }
         }
     }
 }

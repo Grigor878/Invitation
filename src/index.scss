@@ -51,9 +51,9 @@ body {
     //     padding: 0 100px;
     // }
 
-    // @media screen and (max-width: 1280px) {
-    //     padding: 0 16px;
-    // }
+    @media screen and (max-width: 768px) {
+        padding: 0 47px;
+    }
 }
 
 img {
@@ -96,6 +96,12 @@ input[type="number"] {
     line-height: 48px;
     text-align: center;
     text-align: center;
+
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 27px;
+    }
 }
 
 // btns
@@ -126,6 +132,11 @@ input[type="number"] {
     font-weight: 400;
     line-height: 18px;
 
+    @media screen and (max-width: 768px) {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
     span {
         @include flexCenter;
         background: $bg;
@@ -135,6 +146,13 @@ input[type="number"] {
         line-height: 45.69px;
         width: 57px;
         height: 57px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 25px;
+            line-height: 38px;
+            width: 47px;
+            height: 47px;
+        }
     }
 }
 

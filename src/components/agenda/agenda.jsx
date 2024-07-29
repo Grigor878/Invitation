@@ -10,19 +10,23 @@ export const Agenda = () => {
       <div className="container">
         <h2 className="title">{t("agenda")}</h2>
 
-        <ul className={styles.agenda_list}>
-          {data?.map(({ id, icon, title, time, place }) => {
-            return (
-              <li key={id} className={styles.agenda_link}>
-                <img src={icon} alt="title" />
-                <div className={styles.agenda_link_circle}></div>
-                <p>{t(title)}</p>
-                <span>{t(time)}</span>
-                <p>{t(place)}</p>
-              </li>
-            );
-          })}
-        </ul>
+        <div  className={styles.agenda_block}>
+          <ul className={styles.agenda_list}>
+            {data?.map(({ id, icon, title, time, place }) => {
+              return (
+                <li key={id} className={styles.agenda_link}>
+                  <img src={icon} alt="title" />
+                  <div className={styles.agenda_link_circle}></div>
+                  <div className={styles.agenda_link_context}>
+                    <p>{t(title)}</p>
+                    <span>{t(time)}</span>
+                    <p>{t(place)}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </div>
   );

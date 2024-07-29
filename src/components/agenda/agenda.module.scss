@@ -3,16 +3,41 @@
 .agenda {
     background: $bg;
     padding: 59px 0 83px 0;
+    
+    @media screen and (max-width: 768px) {
+       padding: 34px 0 21px 0;
+    }
+
+    &_block {
+        @media screen and (max-width: 1120px) {
+            @include flexCenter;
+        }
+    }
 
     &_list {
         @include flex;
         justify-content: space-between;
-        padding-top: 74px;
+        padding-top: 70px;
         list-style: none;
+
+        @media screen and (max-width: 1120px) {
+            align-items: start;
+            flex-direction: column;
+            gap: 57px;
+        }
     }
 
     &_link {
         @include flexColCenter;
+
+        @media screen and (max-width: 1120px) {
+            flex-direction: row;
+            gap: 40px;
+        }
+
+        @media screen and (max-width: 768px) {
+            gap: 10px;
+        }
 
         img {
             width: 121px;
@@ -53,6 +78,10 @@
             //     background: #EFEFF0; 
             //     transform: translateY(-50%);
             // }
+        }
+
+        &_context {
+            @include flexColCenter;
         }
     }
 }

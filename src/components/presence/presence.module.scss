@@ -5,19 +5,44 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
 }
 
 .presence {
     padding: 107px 0 50px 0;
 
+    @media screen and (max-width: 768px) {
+        padding: 51px 0 34px 0;
+    }
+
     h2 {
         padding-bottom: 74px;
+
+        @media screen and (max-width: 768px) {
+            padding-bottom: 41px;
+        }
     }
 
     &_list {
         display: flex;
         justify-content: space-between;
         list-style: none;
+        gap: 22px;
+
+        @media screen and (max-width: 1120px) {
+            flex-wrap: wrap;
+            gap: 100px;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            gap: 23px;
+        }
     }
 
     &_link {
@@ -25,17 +50,45 @@
         gap: 15px;
         align-items: flex-start;
 
+        @media screen and (max-width: 1120px) {
+            align-items: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+
+        img {
+            width: 70px;
+            height: 58px;
+            object-fit: contain;
+
+            @media screen and (max-width: 768px) {
+                width: 61px;
+            }
+        }
+
         p {
             color: $darkGreen;
             font-size: 32px;
             font-weight: 600;
             line-height: 48px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 20px;
+                line-height: 30px;
+            }
         }
 
     }
 
     &_block {
         @include flexCol;
+        text-align: center;
+
+        @media screen and (max-width: 1120px) {
+            align-items: center;
+        }
 
         span {
             @include input;

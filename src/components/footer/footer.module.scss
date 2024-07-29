@@ -1,6 +1,30 @@
 @import "../../variables";
 
-.footer{
+.footer {
     @include flexColCenter;
     padding: 46px 0 76px 0;
+
+    @media screen and (max-width: 768px) {
+        padding: 50px 0 13px 0;
+    }
+
+    p {
+        color: $text;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+        }
+    }
+
+    img {
+        @media screen and (max-width: 768px) {
+            width: 95px;
+            height: 58px;
+        }
+    }
 }
