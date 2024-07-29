@@ -34,7 +34,6 @@ export const Main = () => {
       success(t("success"));
     } catch (err) {
       error(`Error - ${err?.text}`);
-      // error(`Status - ${err.status}`);
     } finally {
       setFullname("");
       setGuests("");
