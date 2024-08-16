@@ -84,7 +84,6 @@
 
     &_block {
         @include flexCol;
-        text-align: center;
 
         @media screen and (max-width: 1120px) {
             align-items: center;
@@ -96,7 +95,6 @@
 
         &_link {
             @include input;
-
             text-decoration: underline;
         }
 
