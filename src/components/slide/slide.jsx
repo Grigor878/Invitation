@@ -1,8 +1,8 @@
-import { data } from "./data";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { data } from "./data";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import { useState } from "react";
 import styles from "./slide.module.scss";
 
 export const Slide = () => {

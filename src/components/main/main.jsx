@@ -2,14 +2,14 @@ import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { timeUntil } from "../../utils/helpers";
 import emailjs from "@emailjs/browser";
-import main from "../../assets/imgs/main.png";
+import main from "../../assets/imgs/1.jpg";
 import styles from "./main.module.scss";
 import { error, loading, success } from "../../actions/actions";
 
 export const Main = () => {
   const { t } = useTranslation();
   const form = useRef();
-  const targetDate = "September 14, 2024";
+  const targetDate = "April 25, 2025";
 
   const [fullname, setFullname] = useState("");
   const [guests, setGuests] = useState("");

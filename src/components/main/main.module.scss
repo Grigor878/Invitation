@@ -13,9 +13,11 @@
 
     &_img {
         width: 445px;
+        height: 526px;
 
         @media screen and (max-width: 768px) {
             width: 312px;
+            height: fit-content;
         }
     }
 

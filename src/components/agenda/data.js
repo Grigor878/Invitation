@@ -8,30 +8,30 @@ import dj from "../../assets/icons/dj.png";
 export const data = [
     {
         id: 1,
-        icon: church,
-        title: "ceremony",
-        time: "church_time",
-        place: "church_shortname"
+        icon: drinks,
+        title: "bride_house",
+        time: "bride_time",
+        place: "bride_place"
     },
     {
         id: 2,
-        icon: drinks,
-        title: "drinks",
-        time: "venue_time",
-        place: "voskevas"
+        icon: church,
+        title: "ceremony",
+        time: "church_time",
+        place: "church_location"
     },
     {
         id: 3,
-        icon: registration,
-        title: "registration",
-        time: "registration_time",
+        icon: banquet,
+        title: "banquet",
+        time: "banquet_time",
         place: "voskevas"
     },
     {
         id: 4,
-        icon: banquet,
-        title: "banquet",
-        time: "banquet_time",
+        icon: registration,
+        title: "registration",
+        time: "registration_time",
         place: "voskevas"
     },
     {

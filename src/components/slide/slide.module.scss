@@ -1,16 +1,18 @@
 @import '../../variables';
 
 .slide {
-    @include flex;
-    justify-content: space-between;
+    @include flexCenter;
     gap: 17px;
     overflow-y: scroll;
+    padding-top: 57px;
 
     &::-webkit-scrollbar {
         height: 5px !important;
     }
 
     &_img {
+        width: 358px;
+        height: 347px;
         cursor: zoom-in;
 
         @media screen and (max-width: 768px) {

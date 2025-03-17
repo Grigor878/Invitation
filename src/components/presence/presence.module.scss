@@ -91,6 +91,10 @@
 
         span {
             @include input;
+
+            @media screen and (max-width: 1120px) {
+                text-align: center;
+            }
         }
 
         &_link {

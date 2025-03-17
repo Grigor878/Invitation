@@ -22,7 +22,7 @@ export const Presence = () => {
                 <Link
                   title={`Google Maps - ${t(map)}`}
                   to={redirect}
-                  target="/blank"
+                  target="_blank"
                   className={styles.presence_block_link}
                 >
                   {t(map)}
