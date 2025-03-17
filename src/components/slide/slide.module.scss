@@ -11,8 +11,9 @@
     }
 
     &_img {
-        width: 358px;
-        height: 347px;
+        width: 400px;
+        height: 400px;
+        object-fit: contain;
         cursor: zoom-in;
 
         @media screen and (max-width: 768px) {

@@ -45,11 +45,11 @@ export const data = [
         phones: [
             {
                 who: "men",
-                tel: "+374 43 041884"
+                tel: "+374 43 04 18 84"
             },
             {
                 who: "women",
-                tel: "+374 33 038588"
+                tel: "+374 33 03 85 88"
             },
         ]
     },
