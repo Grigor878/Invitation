@@ -15,9 +15,15 @@
         width: 445px;
         height: 526px;
 
+        @media screen and (max-width: 1120px) {
+            width: 360px;
+            height: 400px;
+            object-fit: contain;
+        }
+
+
         @media screen and (max-width: 768px) {
-            width: 312px;
-            height: fit-content;
+            height: 252px;
         }
     }
 

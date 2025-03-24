@@ -11,15 +11,36 @@ export const Main = () => {
   const form = useRef();
   const targetDate = "April 25, 2025";
 
-  const [fullname, setFullname] = useState("");
-  const [guests, setGuests] = useState("");
-  const [notes, setNotes] = useState("");
+  const [formData, setFormData] = useState({
+    fullname: "",
+    guests: "",
+    notes: "",
+  });
 
   const { VITE_PUBLIC_KEY, VITE_TEMPLATE_ID, VITE_SERVICE_ID } = import.meta
     .env;
 
+  // const handleReject = () => {
+  //   fullname && (setNotes(t("reject")), setGuests("0"), sendEmail());
+  // };
+
   const handleReject = () => {
-    fullname && (setNotes(t("reject")), setGuests("0"), sendEmail());
+    if (formData.fullname) {
+      setFormData((prev) => ({
+        ...prev,
+        notes: t("reject"),
+        guests: "0",
+      }));
+      sendEmail();
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   const sendEmail = async (e) => {
@@ -35,9 +56,7 @@ export const Main = () => {
     } catch (err) {
       error(`Error - ${err?.text}`);
     } finally {
-      setFullname("");
-      setGuests("");
-      setNotes("");
+      setFormData({ fullname: "", guests: "", notes: "" });
     }
   };
 
@@ -60,26 +79,26 @@ export const Main = () => {
 
             <div className={styles.main_form_top}>
               <input
-                name="full_name"
+                name="fullname"
                 type="text"
-                value={fullname}
-                onChange={(e) => setFullname(e.target.value)}
+                value={formData.fullname}
+                onChange={handleChange}
                 placeholder={t("label_one")}
                 required={true}
               />
               <input
-                name="guets"
+                name="guests"
                 type="text"
-                value={guests}
-                onChange={(e) => setGuests(e.target.value)}
+                value={formData.guests}
+                onChange={handleChange}
                 placeholder={t("label_two")}
                 required={true}
               />
             </div>
             <textarea
               name="notes"
-              value={notes}
-              onChange={(e) => setNotes(e.target.value)}
+              value={formData.notes}
+              onChange={handleChange}
               placeholder={t("label_three")}
             />
 
