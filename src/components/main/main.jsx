@@ -20,10 +20,6 @@ export const Main = () => {
   const { VITE_PUBLIC_KEY, VITE_TEMPLATE_ID, VITE_SERVICE_ID } = import.meta
     .env;
 
-  // const handleReject = () => {
-  //   fullname && (setNotes(t("reject")), setGuests("0"), sendEmail());
-  // };
-
   const handleReject = () => {
     if (formData.fullname) {
       setFormData((prev) => ({
