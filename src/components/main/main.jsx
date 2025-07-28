@@ -9,7 +9,7 @@ import { error, loading, success } from "../../actions/actions";
 export const Main = () => {
   const { t } = useTranslation();
   const form = useRef();
-  const targetDate = "April 25, 2025";
+  const targetDate = "September 7, 2025";
 
   const [formData, setFormData] = useState({
     fullname: "",
@@ -66,6 +66,7 @@ export const Main = () => {
           <div className={styles.main_context_text}>
             <p>{t("subtitle_one")}</p>
             <p>{t("subtitle_two")}</p>
+            <p>{t("subtitle_three")}</p>
           </div>
         </div>
 

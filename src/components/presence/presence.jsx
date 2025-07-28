@@ -17,7 +17,8 @@ export const Presence = () => {
               <img src={img} alt={name} />
               <p> {t(name)}</p>
               <div className={styles.presence_block}>
-                <span style={{ width: "100px" }}>{t(text1)}</span>
+                {/* <span style={{ width: "100px" }}>{t(text1)}</span> */}
+                <span>{t(text1)}</span>
                 <span>{t(text2)}</span>
                 <Link
                   title={`Google Maps - ${t(map)}`}

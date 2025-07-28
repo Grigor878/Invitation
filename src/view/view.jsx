@@ -5,9 +5,9 @@ import { Header } from "../components/header/header";
 import { Main } from "../components/main/main";
 import { Presence } from "../components/presence/presence";
 import { Agenda } from "../components/agenda/agenda";
-// import { Attire } from "../components/attire/attire";
+import { Attire } from "../components/attire/attire";
 import { Footer } from "../components/footer/footer";
-import { Slide } from "../components/slide/slide";
+// import { Slide } from "../components/slide/slide";
 
 const View = () => {
   // const navigate = useNavigate();
@@ -28,10 +28,10 @@ const View = () => {
         <Presence />
       </div>
       <Agenda />
-      {/* <div className="container">
+      <div className="container">
         <Attire />
-      </div> */}
-      <Slide />
+      </div>
+      {/* <Slide /> */}
       <Footer />
     </>
   );

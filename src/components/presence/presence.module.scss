@@ -46,9 +46,8 @@
     }
 
     &_link {
-        @include flexCol;
+        @include flexColCenter;
         gap: 15px;
-        align-items: flex-start;
 
         @media screen and (max-width: 1120px) {
             align-items: center;
@@ -83,7 +82,7 @@
     }
 
     &_block {
-        @include flexCol;
+        @include flexColCenter;
 
         @media screen and (max-width: 1120px) {
             align-items: center;

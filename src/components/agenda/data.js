@@ -1,18 +1,18 @@
 import church from "../../assets/icons/church.png";
-import drinks from "../../assets/icons/drinks.png";
+// import drinks from "../../assets/icons/drinks.png";
 import registration from "../../assets/icons/registration.png";
 import banquet from "../../assets/icons/banquet.png";
 import cake from "../../assets/icons/cake.png";
 import dj from "../../assets/icons/dj.png";
 
 export const data = [
-    {
-        id: 1,
-        icon: drinks,
-        title: "bride_house",
-        time: "bride_time",
-        place: "bride_place"
-    },
+    // {
+    //     id: 1,
+    //     icon: drinks,
+    //     title: "bride_house",
+    //     time: "bride_time",
+    //     place: "bride_place"
+    // },
     {
         id: 2,
         icon: church,
