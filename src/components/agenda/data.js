@@ -3,7 +3,7 @@ import church from "../../assets/icons/church.png";
 import registration from "../../assets/icons/registration.png";
 import banquet from "../../assets/icons/banquet.png";
 import cake from "../../assets/icons/cake.png";
-import dj from "../../assets/icons/dj.png";
+// import dj from "../../assets/icons/dj.png";
 
 export const data = [
     // {
@@ -41,11 +41,11 @@ export const data = [
         time: "cake_time",
         place: "voskevas"
     },
-    {
-        id: 6,
-        icon: dj,
-        title: "dj",
-        time: "dj_time",
-        place: "voskevas"
-    },
+    // {
+    //     id: 6,
+    //     icon: dj,
+    //     title: "dj",
+    //     time: "dj_time",
+    //     place: "voskevas"
+    // },
 ]
