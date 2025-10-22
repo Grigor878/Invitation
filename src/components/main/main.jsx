@@ -9,7 +9,7 @@ import { error, loading, success } from "../../actions/actions";
 export const Main = () => {
   const { t } = useTranslation();
   const form = useRef();
-  const targetDate = "September 7, 2025";
+  const targetDate = "November 3, 2025";
 
   const [formData, setFormData] = useState({
     fullname: "",
