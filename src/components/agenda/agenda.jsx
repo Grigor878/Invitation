@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { data } from "./data";
+import { agenda } from "../../utils/constants";
 import styles from "./agenda.module.scss";
 
 export const Agenda = () => {
@@ -12,7 +12,7 @@ export const Agenda = () => {
 
         <div  className={styles.agenda_block}>
           <ul className={styles.agenda_list}>
-            {data?.map(({ id, icon, title, time, place }) => {
+            {agenda?.map(({ id, icon, title, time, place }) => {
               return (
                 <li key={id} className={styles.agenda_link}>
                   <img src={icon} alt="title" />

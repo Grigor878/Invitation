@@ -3,15 +3,15 @@ import { initReactI18next } from "react-i18next";
 import HttpApi from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 import cookies from "js-cookie";
-import { languages } from "./data";
+import { locales } from "../../utils/constants";
 
 i18next
   .use(HttpApi)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    lng: cookies.get("i18next") || "am",
-    supportedLngs: languages,
+    lng: cookies.get("i18next") || "hy",
+    supportedLngs: locales,
     debug: false,
     nsSeparator: false,
     keySeparator: false,
@@ -22,6 +22,6 @@ i18next
     },
     react: { useSuspense: true },
     backend: {
-      loadPath: "/languages/{{lng}}/translation.json?v=" + new Date().getTime(),
+      loadPath: "/locales/{{lng}}.json?v=" + new Date().getTime(),
     },
   });

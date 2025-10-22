@@ -1,33 +1,31 @@
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
-import { languageData } from "./data";
+import { languages } from "../../utils/constants";
 import cookies from "js-cookie";
 import useOutsideClick from "../../hooks/useOutsideClick";
+
 import "./language.scss";
 
 export const Language = () => {
+  const navigate = useNavigate();
+
   const { i18n } = useTranslation();
 
   const lngRef = useRef();
-  const navigate = useNavigate();
 
   const [openLng, setOpenLng] = useState(false);
-  const [selectedLng, setSelectedLng] = useState(
-    cookies.get("lngSelected") || "Eng"
-  );
+  const selected = languages.find(({ code }) => code === i18n?.language);
 
   const handleOpenLng = () => {
     setOpenLng(!openLng);
   };
 
-  const handleChangeLng = (code, name, path) => {
+  const handleChangeLng = (code) => {
     setOpenLng(false);
     i18n.changeLanguage(code);
-    setSelectedLng(name);
     cookies.set("i18next", code);
-    cookies.set("lngSelected", name);
-    navigate(path);
+    navigate(`/${code}`);
   };
 
   useOutsideClick(lngRef, openLng, setOpenLng);
@@ -35,7 +33,7 @@ export const Language = () => {
   return (
     <div className="language" ref={lngRef}>
       <div className="language__choose" onClick={handleOpenLng}>
-        <p>{selectedLng}</p>
+        <p>{selected?.name}</p>
       </div>
 
       <ul
@@ -43,10 +41,10 @@ export const Language = () => {
           !openLng ? "language__dropdown" : "language__dropdown-active"
         }
       >
-        {languageData
-          .filter((el) => el.name !== selectedLng)
-          .map(({ code, name, path }) => (
-            <li key={code} onClick={() => handleChangeLng(code, name, path)}>
+        {languages
+          .filter((el) => el.code !== selected?.code)
+          .map(({ code, name }) => (
+            <li key={code} onClick={() => handleChangeLng(code)}>
               {name}
             </li>
           ))}
