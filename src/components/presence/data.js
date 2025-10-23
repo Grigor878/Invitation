@@ -27,7 +27,7 @@ export const data = [
         text1: "church_time",
         // text2: "church_name",
         map: "church_location",
-        redirect: "https://yandex.com/maps/-/CHHenNZA"
+        redirect: "https://yandex.com/maps/10262/yerevan/?ll=44.489176%2C40.214013&mode=poi&poi%5Bpoint%5D=44.488722%2C40.213991&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D72773735771&z=18.15"
     },
     {
         id: 3,
@@ -36,7 +36,7 @@ export const data = [
         text1: "venue_time",
         // text2: "voskevas",
         map: "voskevas",
-        redirect: "https://yandex.com/maps/-/CHHenX-Z"
+        redirect: "https://yandex.com/maps/org/230443572259/?ll=44.587259%2C40.193110&z=17.14"
     },
     // {
     //     id: 4,

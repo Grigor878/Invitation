@@ -55,17 +55,17 @@ export const agenda = [
         place: "church_location"
     },
     {
-        id: 3,
-        icon: banquet,
-        title: "banquet",
-        time: "banquet_time",
-        place: "voskevas"
-    },
-    {
         id: 4,
         icon: registration,
         title: "registration",
         time: "registration_time",
+        place: "voskevas"
+    },
+    {
+        id: 3,
+        icon: banquet,
+        title: "banquet",
+        time: "banquet_time",
         place: "voskevas"
     },
     {

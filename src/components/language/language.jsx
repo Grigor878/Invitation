@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { languages } from "../../utils/constants";
 import cookies from "js-cookie";
 import useOutsideClick from "../../hooks/useOutsideClick";
-
+import Flag from "react-world-flags";
 import "./language.scss";
 
 export const Language = () => {
@@ -32,8 +32,15 @@ export const Language = () => {
 
   return (
     <div className="language" ref={lngRef}>
-      <div className="language__choose" onClick={handleOpenLng}>
+      <div className="language__choose" onClick={handleOpenLng} title="Change Language">
         <p>{selected?.name}</p>
+        <Flag
+          code={selected?.path.slice(1).toUpperCase()}
+          width="25"
+          height="25"
+          style={{ border: "1px solid #00000033" }}
+          alt="lng_glag"
+        />
       </div>
 
       <ul

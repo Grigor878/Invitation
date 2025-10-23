@@ -5,8 +5,8 @@ import { Header } from "../components/header/header";
 import { Main } from "../components/main/main";
 import { Presence } from "../components/presence/presence";
 import { Agenda } from "../components/agenda/agenda";
-import { Attire } from "../components/attire/attire";
 import { Footer } from "../components/footer/footer";
+import { Video } from "../components/video/video";
 // import { Slide } from "../components/slide/slide";
 
 const View = () => {
@@ -26,10 +26,11 @@ const View = () => {
         <Presence />
       </div>
       <Agenda />
-      <div className="container">
+      {/* <div className="container">
         <Attire />
-      </div>
+      </div> */}
       {/* <Slide /> */}
+      <Video />
       <Footer />
     </>
   );

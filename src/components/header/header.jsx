@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Language } from "../language/language";
+import { Music } from "../music/music";
 import styles from "./header.module.scss";
 
 export const Header = () => {
@@ -7,6 +8,8 @@ export const Header = () => {
 
   return (
     <header className={styles.header}>
+      <Music />
+
       <div className={styles.header_context}>
         <h2>{t("sub_title")}</h2>
         <p>{t("wedding_date")}</p>
