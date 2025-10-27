@@ -12,19 +12,21 @@
     }
 
     &_img {
-        width: 445px;
+        // width: 445px;
+        width: 80%;
         height: 526px;
         border-radius: 5px;
 
         @media screen and (max-width: 1120px) {
-            width: 360px;
-            height: 400px;
+            // width: 360px;
+            // height: 400px;
+            width: 100%;
             object-fit: contain;
         }
 
-
         @media screen and (max-width: 768px) {
-            height: 252px;
+            // height: 252px;
+            height: 400px;
         }
     }
 
