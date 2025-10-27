@@ -1,0 +1,9 @@
+@import "../../variables";
+
+.fade-element {
+    opacity: 0;
+
+    &.active {
+        @include fade-in();
+    }
+}

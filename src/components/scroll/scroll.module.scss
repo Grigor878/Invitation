@@ -1,0 +1,26 @@
+@import "../../variables";
+
+.scroll {
+  display: none;
+}
+
+.scrollVisible {
+  @include transition;
+  display: block;
+  position: fixed;
+  right: 40px;
+  bottom: 120px;
+  z-index: 101;
+  font-size: 45px;
+  cursor: pointer;
+  color: $darkGreen;
+  background: $white;
+  border-radius: 100%;
+  border: 1px solid $white;
+
+  @media screen and (max-width: 768px) {
+    bottom: 85px;
+    font-size: 37px;
+    right: 15px;
+  }
+}

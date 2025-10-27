@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react";
 import styles from "./video.module.scss";
 import video from "../../assets/video.mp4";
 import useMediaQuery from "../../hooks/useMediaQuery";
+import { Fade } from "../fade/fade";
 
 export const Video = () => {
   const videoRef = useRef(null);
@@ -40,10 +41,12 @@ export const Video = () => {
   }, []);
 
   return (
-    <div className={styles.video}>
-      <div className={!mobile && "container"}>
-        <video ref={videoRef} src={video} loop playsInline muted />
+    <Fade>
+      <div className={styles.video}>
+        <div className={!mobile && "container"}>
+          <video ref={videoRef} src={video} loop playsInline muted />
+        </div>
       </div>
-    </div>
+    </Fade>
   );
 };

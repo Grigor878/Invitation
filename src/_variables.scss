@@ -6,6 +6,10 @@ $darkGreen: #004143;
 $bg: #F4FBFF;
 $reject: #000000;
 
+$fade-duration: 1s !default;
+$fade-timing: ease-in-out !default;
+$fade-delay: 0.5s !default;
+
 @mixin flex {
     display: flex;
     align-items: center;
@@ -35,4 +39,35 @@ $reject: #000000;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
+}
+
+
+// @mixin fade-in($duration: 0.5s, $timing: ease-in, $delay: 0s) {
+//     opacity: 0; // start hidden
+//     animation: fadeInAnimation $duration $timing $delay forwards;
+// }
+
+// @keyframes fadeInAnimation {
+//     from {
+//         opacity: 0;
+//     }
+
+//     to {
+//         opacity: 1;
+//     }
+// }
+
+@mixin fade-in() {
+    opacity: 0;
+    animation: fadeInAnimation $fade-duration $fade-timing $fade-delay forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

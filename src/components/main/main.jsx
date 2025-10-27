@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import main from "../../assets/imgs/1.jpg";
 import styles from "./main.module.scss";
 import { error, loading, success } from "../../actions/actions";
+import { Fade } from "../fade/fade";
 
 export const Main = () => {
   const { t } = useTranslation();
@@ -57,75 +58,77 @@ export const Main = () => {
   };
 
   return (
-    <div className={styles.main}>
-      <img className={styles.main_img} src={main} alt="flower" />
+    <Fade>
+      <div className={styles.main}>
+        <img className={styles.main_img} src={main} alt="flower" />
 
-      <div className={styles.main_right}>
-        <div className={styles.main_context}>
-          <h2>{t("names")}</h2>
-          <div className={styles.main_context_text}>
-            <p>{t("subtitle_one")}</p>
-            <p>{t("subtitle_two")}</p>
-            <p>{t("subtitle_three")}</p>
+        <div className={styles.main_right}>
+          <div className={styles.main_context}>
+            <h2>{t("names")}</h2>
+            <div className={styles.main_context_text}>
+              <p>{t("subtitle_one")}</p>
+              <p>{t("subtitle_two")}</p>
+              {/* <p>{t("subtitle_three")}</p> */}
+            </div>
           </div>
-        </div>
 
-        <div className={styles.main_decision}>
-          <form ref={form} className={styles.main_form} onSubmit={sendEmail}>
-            <h4>{t("form")}</h4>
+          <div className={styles.main_decision}>
+            <form ref={form} className={styles.main_form} onSubmit={sendEmail}>
+              <h4>{t("form")}</h4>
 
-            <div className={styles.main_form_top}>
-              <input
-                name="fullname"
-                type="text"
-                value={formData.fullname}
+              <div className={styles.main_form_top}>
+                <input
+                  name="fullname"
+                  type="text"
+                  value={formData.fullname}
+                  onChange={handleChange}
+                  placeholder={t("label_one")}
+                  required={true}
+                />
+                <input
+                  name="guests"
+                  type="text"
+                  value={formData.guests}
+                  onChange={handleChange}
+                  placeholder={t("label_two")}
+                  required={true}
+                />
+              </div>
+              <textarea
+                name="notes"
+                value={formData.notes}
                 onChange={handleChange}
-                placeholder={t("label_one")}
-                required={true}
+                placeholder={t("label_three")}
               />
-              <input
-                name="guests"
-                type="text"
-                value={formData.guests}
-                onChange={handleChange}
-                placeholder={t("label_two")}
-                required={true}
-              />
-            </div>
-            <textarea
-              name="notes"
-              value={formData.notes}
-              onChange={handleChange}
-              placeholder={t("label_three")}
-            />
 
-            <div className={styles.main_form_btns}>
-              <button
-                type="submit"
-                onClick={handleReject}
-                className="btnReject"
-              >
-                {t("reject")}
-              </button>
-              <button type="submit" className="btnAccept">
-                {t("accept")}
-              </button>
-            </div>
-          </form>
+              <div className={styles.main_form_btns}>
+                <button
+                  type="submit"
+                  onClick={handleReject}
+                  className="btnReject"
+                >
+                  {t("reject")}
+                </button>
+                <button type="submit" className="btnAccept">
+                  {t("accept")}
+                </button>
+              </div>
+            </form>
 
-          <div className={styles.main_form_remainder}>
-            <p className="card">
-              {t("days")} <span>{timeUntil(targetDate)?.days}</span>
-            </p>
-            <p className="card">
-              {t("hours")} <span>{timeUntil(targetDate)?.hours}</span>
-            </p>
-            <p className="card">
-              {t("minutes")} <span>{timeUntil(targetDate)?.minutes}</span>
-            </p>
+            <div className={styles.main_form_remainder}>
+              <p className="card">
+                {t("days")} <span>{timeUntil(targetDate)?.days}</span>
+              </p>
+              <p className="card">
+                {t("hours")} <span>{timeUntil(targetDate)?.hours}</span>
+              </p>
+              <p className="card">
+                {t("minutes")} <span>{timeUntil(targetDate)?.minutes}</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Fade>
   );
 };

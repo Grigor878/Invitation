@@ -7,6 +7,8 @@ import { Presence } from "../components/presence/presence";
 import { Agenda } from "../components/agenda/agenda";
 import { Footer } from "../components/footer/footer";
 import { Video } from "../components/video/video";
+import { Music } from "../components/music/music";
+import { Scroll } from "../components/scroll/scroll";
 // import { Slide } from "../components/slide/slide";
 
 const View = () => {
@@ -32,6 +34,8 @@ const View = () => {
       {/* <Slide /> */}
       <Video />
       <Footer />
+      <Scroll/>
+      <Music />
     </>
   );
 };
